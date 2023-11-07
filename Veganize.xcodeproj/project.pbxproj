@@ -11,7 +11,31 @@
 		71331E772AF5D9810070D778 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E762AF5D9810070D778 /* ContentView.swift */; };
 		71331E792AF5D9830070D778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71331E782AF5D9830070D778 /* Assets.xcassets */; };
 		71331E7C2AF5D9830070D778 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71331E7B2AF5D9830070D778 /* Preview Assets.xcassets */; };
+		71331E8F2AF6B23B0070D778 /* ScaledFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E8E2AF6B23B0070D778 /* ScaledFont.swift */; };
+		71331E912AF6B2480070D778 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E902AF6B2480070D778 /* CustomButtonStyle.swift */; };
+		71331E932AF6B24C0070D778 /* ButtonStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E922AF6B24C0070D778 /* ButtonStyle+Extension.swift */; };
+		71331E952AF6B24F0070D778 /* Text+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E942AF6B24F0070D778 /* Text+Extension.swift */; };
+		71331E972AF6B25E0070D778 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E962AF6B25E0070D778 /* Theme.swift */; };
+		71331E992AF6B2620070D778 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E982AF6B2620070D778 /* Constants.swift */; };
+		71331E9B2AF6B26A0070D778 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E9A2AF6B26A0070D778 /* SectionHeader.swift */; };
+		71331E9E2AF6B3BA0070D778 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331E9D2AF6B3BA0070D778 /* HomeView.swift */; };
+		71331EA02AF6B46A0070D778 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71331E9F2AF6B46A0070D778 /* Theme.xcassets */; };
+		71FFDE0F2AF9BABB003491BC /* RecipeDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFDE0E2AF9BABB003491BC /* RecipeDataService.swift */; };
+		71FFDE112AF9C6C7003491BC /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFDE102AF9C6C7003491BC /* Recipe.swift */; };
+		71FFDE142AF9D0E5003491BC /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFDE132AF9D0E5003491BC /* HTTPDataDownloader.swift */; };
+		71FFDE162AF9D103003491BC /* RecipeAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFDE152AF9D103003491BC /* RecipeAPIError.swift */; };
+		71FFDE1E2AF9DFA2003491BC /* VeganizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FFDE1D2AF9DFA2003491BC /* VeganizeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71FFDE1F2AF9DFA2003491BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71331E692AF5D9810070D778 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71331E702AF5D9810070D778;
+			remoteInfo = Veganize;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		71331E712AF5D9810070D778 /* Veganize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veganize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +43,32 @@
 		71331E762AF5D9810070D778 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		71331E782AF5D9830070D778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71331E7B2AF5D9830070D778 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		71331E8E2AF6B23B0070D778 /* ScaledFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledFont.swift; sourceTree = "<group>"; };
+		71331E902AF6B2480070D778 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
+		71331E922AF6B24C0070D778 /* ButtonStyle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+Extension.swift"; sourceTree = "<group>"; };
+		71331E942AF6B24F0070D778 /* Text+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Text+Extension.swift"; sourceTree = "<group>"; };
+		71331E962AF6B25E0070D778 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		71331E982AF6B2620070D778 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		71331E9A2AF6B26A0070D778 /* SectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		71331E9D2AF6B3BA0070D778 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		71331E9F2AF6B46A0070D778 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		71FFDE0E2AF9BABB003491BC /* RecipeDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDataService.swift; sourceTree = "<group>"; };
+		71FFDE102AF9C6C7003491BC /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		71FFDE132AF9D0E5003491BC /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
+		71FFDE152AF9D103003491BC /* RecipeAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPIError.swift; sourceTree = "<group>"; };
+		71FFDE1B2AF9DFA2003491BC /* VeganizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeganizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71FFDE1D2AF9DFA2003491BC /* VeganizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeganizeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		71331E6E2AF5D9810070D778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71FFDE182AF9DFA2003491BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				71331E732AF5D9810070D778 /* Veganize */,
+				71FFDE1C2AF9DFA2003491BC /* VeganizeTests */,
 				71331E722AF5D9810070D778 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				71331E712AF5D9810070D778 /* Veganize.app */,
+				71FFDE1B2AF9DFA2003491BC /* VeganizeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,9 +99,11 @@
 		71331E732AF5D9810070D778 /* Veganize */ = {
 			isa = PBXGroup;
 			children = (
-				71331E742AF5D9810070D778 /* VeganizeApp.swift */,
-				71331E762AF5D9810070D778 /* ContentView.swift */,
-				71331E782AF5D9830070D778 /* Assets.xcassets */,
+				71FFDE0D2AF9BAA0003491BC /* Networking */,
+				71331E852AF5E0740070D778 /* Views */,
+				71331E862AF5E0790070D778 /* Models */,
+				71331E822AF5DB040070D778 /* App */,
+				71331E8D2AF6B2320070D778 /* Utilities */,
 				71331E7A2AF5D9830070D778 /* Preview Content */,
 			);
 			path = Veganize;
@@ -65,6 +115,105 @@
 				71331E7B2AF5D9830070D778 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		71331E822AF5DB040070D778 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				71331E762AF5D9810070D778 /* ContentView.swift */,
+				71331E742AF5D9810070D778 /* VeganizeApp.swift */,
+				71331E782AF5D9830070D778 /* Assets.xcassets */,
+				71331E9F2AF6B46A0070D778 /* Theme.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		71331E852AF5E0740070D778 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				71331E8B2AF5E0C20070D778 /* Settings */,
+				71331E8A2AF5E0BC0070D778 /* Favorites */,
+				71331E882AF5E0AD0070D778 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71331E862AF5E0790070D778 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				71FFDE102AF9C6C7003491BC /* Recipe.swift */,
+				71FFDE152AF9D103003491BC /* RecipeAPIError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		71331E882AF5E0AD0070D778 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				71331E9D2AF6B3BA0070D778 /* HomeView.swift */,
+				71331E9C2AF6B3340070D778 /* Supporting Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		71331E8A2AF5E0BC0070D778 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		71331E8B2AF5E0C20070D778 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		71331E8D2AF6B2320070D778 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				71331E8E2AF6B23B0070D778 /* ScaledFont.swift */,
+				71331E902AF6B2480070D778 /* CustomButtonStyle.swift */,
+				71331E922AF6B24C0070D778 /* ButtonStyle+Extension.swift */,
+				71331E942AF6B24F0070D778 /* Text+Extension.swift */,
+				71331E9A2AF6B26A0070D778 /* SectionHeader.swift */,
+				71331E962AF6B25E0070D778 /* Theme.swift */,
+				71331E982AF6B2620070D778 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		71331E9C2AF6B3340070D778 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		71FFDE0D2AF9BAA0003491BC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				71FFDE122AF9D0D6003491BC /* API */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		71FFDE122AF9D0D6003491BC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				71FFDE0E2AF9BABB003491BC /* RecipeDataService.swift */,
+				71FFDE132AF9D0E5003491BC /* HTTPDataDownloader.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		71FFDE1C2AF9DFA2003491BC /* VeganizeTests */ = {
+			isa = PBXGroup;
+			children = (
+				71FFDE1D2AF9DFA2003491BC /* VeganizeTests.swift */,
+			);
+			path = VeganizeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +236,24 @@
 			productReference = 71331E712AF5D9810070D778 /* Veganize.app */;
 			productType = "com.apple.product-type.application";
 		};
+		71FFDE1A2AF9DFA2003491BC /* VeganizeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71FFDE212AF9DFA2003491BC /* Build configuration list for PBXNativeTarget "VeganizeTests" */;
+			buildPhases = (
+				71FFDE172AF9DFA2003491BC /* Sources */,
+				71FFDE182AF9DFA2003491BC /* Frameworks */,
+				71FFDE192AF9DFA2003491BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71FFDE202AF9DFA2003491BC /* PBXTargetDependency */,
+			);
+			name = VeganizeTests;
+			productName = VeganizeTests;
+			productReference = 71FFDE1B2AF9DFA2003491BC /* VeganizeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +266,10 @@
 				TargetAttributes = {
 					71331E702AF5D9810070D778 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					71FFDE1A2AF9DFA2003491BC = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 71331E702AF5D9810070D778;
 					};
 				};
 			};
@@ -116,6 +287,7 @@
 			projectRoot = "";
 			targets = (
 				71331E702AF5D9810070D778 /* Veganize */,
+				71FFDE1A2AF9DFA2003491BC /* VeganizeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -125,8 +297,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71331EA02AF6B46A0070D778 /* Theme.xcassets in Resources */,
 				71331E7C2AF5D9830070D778 /* Preview Assets.xcassets in Resources */,
 				71331E792AF5D9830070D778 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71FFDE192AF9DFA2003491BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +317,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71331E8F2AF6B23B0070D778 /* ScaledFont.swift in Sources */,
+				71331E932AF6B24C0070D778 /* ButtonStyle+Extension.swift in Sources */,
 				71331E772AF5D9810070D778 /* ContentView.swift in Sources */,
+				71FFDE112AF9C6C7003491BC /* Recipe.swift in Sources */,
+				71331E9E2AF6B3BA0070D778 /* HomeView.swift in Sources */,
+				71331E912AF6B2480070D778 /* CustomButtonStyle.swift in Sources */,
+				71331E952AF6B24F0070D778 /* Text+Extension.swift in Sources */,
+				71FFDE162AF9D103003491BC /* RecipeAPIError.swift in Sources */,
+				71FFDE0F2AF9BABB003491BC /* RecipeDataService.swift in Sources */,
+				71331E9B2AF6B26A0070D778 /* SectionHeader.swift in Sources */,
 				71331E752AF5D9810070D778 /* VeganizeApp.swift in Sources */,
+				71331E972AF6B25E0070D778 /* Theme.swift in Sources */,
+				71FFDE142AF9D0E5003491BC /* HTTPDataDownloader.swift in Sources */,
+				71331E992AF6B2620070D778 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71FFDE172AF9DFA2003491BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71FFDE1E2AF9DFA2003491BC /* VeganizeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71FFDE202AF9DFA2003491BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71331E702AF5D9810070D778 /* Veganize */;
+			targetProxy = 71FFDE1F2AF9DFA2003491BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		71331E7D2AF5D9830070D778 /* Debug */ = {
@@ -322,6 +530,42 @@
 			};
 			name = Release;
 		};
+		71FFDE222AF9DFA2003491BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VM5MRXF6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lewis.danielle.VeganizeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Veganize.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Veganize";
+			};
+			name = Debug;
+		};
+		71FFDE232AF9DFA2003491BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7VM5MRXF6F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lewis.danielle.VeganizeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Veganize.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Veganize";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -339,6 +583,15 @@
 			buildConfigurations = (
 				71331E802AF5D9830070D778 /* Debug */,
 				71331E812AF5D9830070D778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71FFDE212AF9DFA2003491BC /* Build configuration list for PBXNativeTarget "VeganizeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71FFDE222AF9DFA2003491BC /* Debug */,
+				71FFDE232AF9DFA2003491BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
