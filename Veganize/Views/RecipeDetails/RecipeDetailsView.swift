@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct RecipeDetailsView: View {
+    let recipe: Recipe
+    @ObservedObject var viewModel: RecipeDetailsViewModel
+    
+    init(recipe: Recipe, service: RecipeServiceProtocol) {
+        self.recipe = recipe
+        self.viewModel = RecipeDetailsViewModel(recipeId: recipe.id, service: service)
+    }
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            if let details = viewModel.recipeDetails {
+                Text(details.title)
+                
+                ForEach(details.ingredients, id: \.self) { ingredient in
+                    VStack {
+                        Text(ingredient)
+                    }
+                }
+                
+                ForEach(details.instructions, id: \.self) { step in
+                    Text(step)
+                }
+            }
+        }
     }
 }
 
-#Preview {
-    RecipeDetailsView()
-}
+//#Preview {
+//    RecipeDetailsView(service: RecipeDataService())
+//}
