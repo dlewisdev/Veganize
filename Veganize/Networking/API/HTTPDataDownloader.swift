@@ -7,32 +7,36 @@
 
 import Foundation
 
+import Foundation
+
 protocol HTTPDataDownloader {
-    func fetchData<T: Decodable>(as type: T.Type, endpoint: String) async throws -> T
+    func fetchData<T: Decodable>(as type: T.Type, endpoint: String, headers: [String: String]) async throws -> T
 }
 
 extension HTTPDataDownloader {
-     func fetchData<T: Decodable>(as type: T.Type, endpoint: String) async throws -> T {
+    func fetchData<T: Decodable>(as type: T.Type, endpoint: String, headers: [String: String] = [
+        "X-RapidAPI-Key": "b609c43c0fmsh2666e8686630636p163279jsn0ad6b1b1e94f",
+        "X-RapidAPI-Host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
+    ]) async throws -> T {
         
         guard let url = URL(string: endpoint) else {
             throw RecipeAPIError.requestFailed(description: "Invalid URL")
         }
         
-        let (data, response) = try await URLSession.shared.data(from: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = headers
         
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw RecipeAPIError.requestFailed(description: "Request Failed")
-        }
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-        guard httpResponse.statusCode == 200  else {
-            throw RecipeAPIError.invalidStatusCode(statusCode: httpResponse.statusCode)
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw RecipeAPIError.invalidStatusCode(statusCode: (response as? HTTPURLResponse)?.statusCode ?? -1)
         }
         
         do {
             return try JSONDecoder().decode(type, from: data)
         } catch {
-            print("DEBUG: Error \(error.localizedDescription)")
-            throw error as? RecipeAPIError ?? .unknownError(error: error)
+            throw RecipeAPIError.unknownError(error: error)
         }
     }
 }

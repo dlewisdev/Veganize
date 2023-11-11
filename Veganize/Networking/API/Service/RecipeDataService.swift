@@ -8,26 +8,30 @@
 import Foundation
 
 protocol RecipeServiceProtocol {
-    func fetchRecipes() async throws -> [Recipe]
-    func fetchRecipeDetails(id: String) async throws -> RecipeDetails?
+    func fetchRecipes(query: String) async throws -> RecipeResponse
+    func fetchRecipeDetails(id: Int) async throws -> RecipeDetails?
 }
 
-class RecipeDataService: HTTPDataDownloader {
+class RecipeDataService: HTTPDataDownloader, RecipeServiceProtocol {
+
     
-    func fetchRecipeSearchResults(query: String) async throws -> [Recipe] {
+    
+    func fetchRecipes(query: String) async throws -> RecipeResponse {
+        
         guard let endpoint = veganRecipeSearchURLString(query: query) else {
            throw RecipeAPIError.requestFailed(description: "Invalid endpoint")
         }
         
-        return try await fetchData(as: [Recipe].self, endpoint: endpoint)
+        return try await fetchData(as: RecipeResponse.self, endpoint: endpoint)
     }
     
-    func fetchRecipeDetails(id: String) async throws -> RecipeDetails {
+    func fetchRecipeDetails(id: Int) async throws -> RecipeDetails? {
         guard let endpoint = recipeDetailsURLString(id: id) else {
             throw RecipeAPIError.requestFailed(description: "Invalid endpoint")
         }
         
         let details = try await fetchData(as: RecipeDetails.self, endpoint: endpoint)
+        print("DEBUG: Got details from API")
         return details
     }
     
@@ -57,7 +61,7 @@ class RecipeDataService: HTTPDataDownloader {
         return components.url?.absoluteString
     }
     
-    private func recipeDetailsURLString(id: String) -> String? {
+    private func recipeDetailsURLString(id: Int) -> String? {
         var components = baseURLComponents
         components.path += "recipes/\(id)/information"
         
