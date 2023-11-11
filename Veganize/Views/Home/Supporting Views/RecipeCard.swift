@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct RecipeCard: View {
+    var recipe: Recipe
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            RecipeImageView(url: recipe.image)
+                .frame(width: 400, height: 250)
+                .cornerRadius(10)
+            
+            Text(recipe.title.uppercased())
+                .condensed(.bold, size: 24)
+        }
     }
 }
 
 #Preview {
-    RecipeCard()
+    RecipeCard(recipe: Recipe(id: 1234, title: "Black Bean Burgers", image: "https://spoonacular.com/recipeImages/510658-312x231.jpg"))
 }
