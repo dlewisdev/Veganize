@@ -7,16 +7,28 @@
 
 import Foundation
 
-struct Recipe: Codable {
+struct RecipeResponse: Codable {
+    let results: [Recipe]
+}
+
+struct Recipe: Identifiable, Codable, Hashable {
     let id: Int
     let title: String
     let image: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, image
+    }
 }
 
 struct RecipeDetails: Codable {
-    let recipe: Recipe
+    let id: String
     let title: String
     let instructions: [String]
     let ingredients: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, instructions, ingredients
+    }
 }
 
