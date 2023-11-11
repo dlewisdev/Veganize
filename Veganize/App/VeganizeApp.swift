@@ -11,7 +11,7 @@ import SwiftUI
 struct VeganizeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(service: MockDataService())
         }
     }
 }
